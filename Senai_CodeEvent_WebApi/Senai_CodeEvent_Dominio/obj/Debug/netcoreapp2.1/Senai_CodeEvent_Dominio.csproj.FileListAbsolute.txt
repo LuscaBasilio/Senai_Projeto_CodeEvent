@@ -1,0 +1,14 @@
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.deps.json
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.dll
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.csprojAssemblyReference.cache
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.csproj.CoreCompileInputs.cache
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.AssemblyInfoInputs.cache
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.AssemblyInfo.cs
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.runtimeconfig.json
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.runtimeconfig.dev.json
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.pdb
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.dll
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.pdb
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\bin\Debug\netcoreapp2.1\Senai_CodeEvent_WebApi.dll
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\bin\Debug\netcoreapp2.1\Senai_CodeEvent_WebApi.pdb
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Dominio\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.csproj.CopyComplete

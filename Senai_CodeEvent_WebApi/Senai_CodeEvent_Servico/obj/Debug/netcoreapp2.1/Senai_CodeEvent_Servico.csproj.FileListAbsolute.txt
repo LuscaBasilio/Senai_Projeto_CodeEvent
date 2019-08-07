@@ -1,0 +1,16 @@
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.deps.json
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.dll
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.csprojAssemblyReference.cache
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.csproj.CoreCompileInputs.cache
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.AssemblyInfoInputs.cache
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.AssemblyInfo.cs
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.runtimeconfig.json
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.runtimeconfig.dev.json
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.pdb
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.dll
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.pdb
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.dll
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Dominio.pdb
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Servico.csproj.CopyComplete
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\bin\Debug\netcoreapp2.1\Senai_CodeEvent_WebApi.dll
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Servico\bin\Debug\netcoreapp2.1\Senai_CodeEvent_WebApi.pdb

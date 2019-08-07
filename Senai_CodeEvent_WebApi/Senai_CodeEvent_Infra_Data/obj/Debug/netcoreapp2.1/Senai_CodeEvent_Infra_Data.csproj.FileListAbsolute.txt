@@ -1,0 +1,11 @@
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Infra_Data\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Infra_Data.deps.json
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Infra_Data\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Infra_Data.dll
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Infra_Data\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Infra_Data.csproj.CoreCompileInputs.cache
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Infra_Data\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Infra_Data.AssemblyInfoInputs.cache
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Infra_Data\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Infra_Data.AssemblyInfo.cs
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Infra_Data\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Infra_Data.csprojAssemblyReference.cache
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Infra_Data\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Infra_Data.runtimeconfig.json
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Infra_Data\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Infra_Data.runtimeconfig.dev.json
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Infra_Data\bin\Debug\netcoreapp2.1\Senai_CodeEvent_Infra_Data.pdb
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Infra_Data\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Infra_Data.dll
+C:\Users\47511187811\Desktop\Senai_Codeevent\Senai_CodeEvent_WebApi\Senai_CodeEvent_Infra_Data\obj\Debug\netcoreapp2.1\Senai_CodeEvent_Infra_Data.pdb
