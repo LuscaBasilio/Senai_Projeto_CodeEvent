@@ -28,7 +28,7 @@ namespace Senai_CodeEvent_WebApi.Repositorios
                     eventoExiste.Titulo = evento.Titulo;
                     eventoExiste.Descricao = evento.Descricao;
                     eventoExiste.DataEvento = evento.DataEvento;
-                    eventoExiste.Categorias = evento.Categorias;
+                    eventoExiste.Categoria = evento.Categoria;
                     eventoExiste.Capacidade = evento.Capacidade;
                     eventoExiste.Restricao = evento.Restricao;
                     eventoExiste.Imagem = evento.Imagem;
@@ -44,15 +44,15 @@ namespace Senai_CodeEvent_WebApi.Repositorios
         {
             using (CodeEventsContext ctx = new CodeEventsContext())
             {
-                return ctx.Eventos.ToList();
+                return ctx.Eventos.Include(x => x.CategoriaNavigation).ToList();
             }
         }
 
-        public List<UsuariosEventos> Interessados(int id)
+        public List<Interessados> Interessados(int id)
         {
             using (CodeEventsContext ctx = new CodeEventsContext())
             {
-                return ctx.UsuariosEventos.Where(x => x.Id == id).ToList();
+                return ctx.Interessados.Where(x => x.IdEvento == id).ToList();
             }
         }
     }

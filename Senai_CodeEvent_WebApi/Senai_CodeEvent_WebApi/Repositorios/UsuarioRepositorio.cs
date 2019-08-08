@@ -14,7 +14,7 @@ namespace Senai_CodeEvent_WebApi.Repositorios
             }
         }
 
-        public void MarcarPresenca(UsuariosEventos UsuarioEvento)
+        public void MarcarPresenca(Interessados UsuarioEvento)
         {
             using (CodeEventsContext ctx = new CodeEventsContext())
             {

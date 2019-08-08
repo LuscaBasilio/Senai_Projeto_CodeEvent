@@ -37,8 +37,7 @@ namespace Senai_CodeEvent_WebApi.Controllers
 
                 var claims = new[]
                 {
-                    new Claim(JwtRegisteredClaimNames.Email, usuario.Email),
-                    new Claim("Nome", usuario.Nome)
+                    new Claim(JwtRegisteredClaimNames.Email, usuario.Email)
                 };
 
                 SymmetricSecurityKey key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("CodeEventsSecurityKey"));
@@ -62,7 +61,7 @@ namespace Senai_CodeEvent_WebApi.Controllers
 
         
         [HttpPost("Presenca")]
-        public IActionResult MarcarPresenca(UsuariosEventos UsuarioEvento)
+        public IActionResult MarcarPresenca(Interessados UsuarioEvento)
         {
             try
             {

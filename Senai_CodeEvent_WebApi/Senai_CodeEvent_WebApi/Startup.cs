@@ -80,14 +80,19 @@ namespace Senai_CodeEvent_WebApi
         {
             if (env.IsDevelopment())
             {
-                app.UseCors("CorsPolicy");
-
-                app.UseSwagger();
-
                 app.UseDeveloperExceptionPage();
-
-                app.UseResponseCompression();
             }
+
+            app.UseCors("CorsPolicy");
+
+            app.UseResponseCompression();
+
+            app.UseSwagger();
+
+            app.UseSwaggerUI(x =>
+            {
+                x.SwaggerEndpoint("/swagger/v1/swagger.json", "CodeEvents");
+            });
 
             app.UseMvc();
         }

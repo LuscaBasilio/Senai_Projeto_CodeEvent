@@ -17,15 +17,15 @@ namespace Senai_CodeEvent_WebApi.Domains
 
         public virtual DbSet<Categorias> Categorias { get; set; }
         public virtual DbSet<Eventos> Eventos { get; set; }
+        public virtual DbSet<Interessados> Interessados { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
-        public virtual DbSet<UsuariosEventos> UsuariosEventos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
                 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=xzzzzzzzzzzzzzz\\NOME; initial catalog = SENAI_CODEEVENTS; integrated security = true;");
+                optionsBuilder.UseSqlServer("Data Source=47511187811; initial catalog = SENAI_CODEEVENTS;user id = sa; pwd = S#nai@132");
             }
         }
 
@@ -52,7 +52,7 @@ namespace Senai_CodeEvent_WebApi.Domains
 
                 entity.Property(e => e.Capacidade).HasColumnName("CAPACIDADE");
 
-                entity.Property(e => e.Categorias).HasColumnName("CATEGORIAS");
+                entity.Property(e => e.Categoria).HasColumnName("CATEGORIA");
 
                 entity.Property(e => e.DataEvento)
                     .HasColumnName("DATA_EVENTO")
@@ -82,10 +82,37 @@ namespace Senai_CodeEvent_WebApi.Domains
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.HasOne(d => d.CategoriasNavigation)
+                entity.HasOne(d => d.CategoriaNavigation)
                     .WithMany(p => p.Eventos)
-                    .HasForeignKey(d => d.Categorias)
-                    .HasConstraintName("FK__EVENTOS__CATEGOR__571DF1D5");
+                    .HasForeignKey(d => d.Categoria)
+                    .HasConstraintName("FK__EVENTOS__CATEGOR__1332DBDC");
+            });
+
+            modelBuilder.Entity<Interessados>(entity =>
+            {
+                entity.ToTable("INTERESSADOS");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Email)
+                    .IsRequired()
+                    .HasColumnName("EMAIL")
+                    .HasMaxLength(150)
+                    .IsUnicode(false);
+
+                entity.Property(e => e.IdEvento).HasColumnName("ID_EVENTO");
+
+                entity.Property(e => e.Nome)
+                    .IsRequired()
+                    .HasColumnName("NOME")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.IdEventoNavigation)
+                    .WithMany(p => p.Interessados)
+                    .HasForeignKey(d => d.IdEvento)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK__INTERESSA__ID_EV__160F4887");
             });
 
             modelBuilder.Entity<Usuarios>(entity =>
@@ -93,7 +120,7 @@ namespace Senai_CodeEvent_WebApi.Domains
                 entity.ToTable("USUARIOS");
 
                 entity.HasIndex(e => e.Email)
-                    .HasName("UQ__USUARIOS__161CF7240B5E94F3")
+                    .HasName("UQ__USUARIOS__161CF724D528341D")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("ID");
@@ -104,38 +131,11 @@ namespace Senai_CodeEvent_WebApi.Domains
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.Property(e => e.Nome)
-                    .IsRequired()
-                    .HasColumnName("NOME")
-                    .HasMaxLength(100)
-                    .IsUnicode(false);
-
                 entity.Property(e => e.Senha)
                     .IsRequired()
                     .HasColumnName("SENHA")
                     .HasMaxLength(100)
                     .IsUnicode(false);
-            });
-
-            modelBuilder.Entity<UsuariosEventos>(entity =>
-            {
-                entity.ToTable("USUARIOS_EVENTOS");
-
-                entity.Property(e => e.Id).HasColumnName("ID");
-
-                entity.Property(e => e.IdEvento).HasColumnName("ID_EVENTO");
-
-                entity.Property(e => e.IdUser).HasColumnName("ID_USER");
-
-                entity.HasOne(d => d.IdEventoNavigation)
-                    .WithMany(p => p.UsuariosEventos)
-                    .HasForeignKey(d => d.IdEvento)
-                    .HasConstraintName("FK__USUARIOS___ID_EV__5AEE82B9");
-
-                entity.HasOne(d => d.IdUserNavigation)
-                    .WithMany(p => p.UsuariosEventos)
-                    .HasForeignKey(d => d.IdUser)
-                    .HasConstraintName("FK__USUARIOS___ID_US__59FA5E80");
             });
         }
     }

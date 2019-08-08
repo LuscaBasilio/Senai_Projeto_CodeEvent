@@ -9,6 +9,6 @@ namespace Senai_CodeEvent_WebApi.Interfaces
     {
         Usuarios Login(string email, string senha);
 
-        void MarcarPresenca(UsuariosEventos UsuarioEvento);
+        void MarcarPresenca(Interessados UsuarioEvento);
     }
 }

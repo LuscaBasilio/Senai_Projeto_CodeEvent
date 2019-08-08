@@ -7,20 +7,20 @@ namespace Senai_CodeEvent_WebApi.Domains
     {
         public Eventos()
         {
-            UsuariosEventos = new HashSet<UsuariosEventos>();
+            Interessados = new HashSet<Interessados>();
         }
 
         public int Id { get; set; }
         public string Titulo { get; set; }
         public string Descricao { get; set; }
         public DateTime DataEvento { get; set; }
-        public int? Categorias { get; set; }
+        public int Categoria { get; set; }
         public int Capacidade { get; set; }
         public bool? Restricao { get; set; }
         public string Imagem { get; set; }
         public string Endereco { get; set; }
 
-        public Categorias CategoriasNavigation { get; set; }
-        public ICollection<UsuariosEventos> UsuariosEventos { get; set; }
+        public Categorias CategoriaNavigation { get; set; }
+        public ICollection<Interessados> Interessados { get; set; }
     }
 }
