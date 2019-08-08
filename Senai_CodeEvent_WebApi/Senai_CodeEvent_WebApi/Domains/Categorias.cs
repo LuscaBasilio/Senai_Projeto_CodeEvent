@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Senai_CodeEvent_WebApi.Domains
 {
-    public partial class Categoria
+    public partial class Categorias
     {
-        public Categoria()
+        public Categorias()
         {
             Eventos = new HashSet<Eventos>();
         }

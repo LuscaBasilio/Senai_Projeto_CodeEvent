@@ -20,11 +20,19 @@ namespace Senai_CodeEvent_WebApi.Repositorios
         {
             using (CodeEventsContext ctx = new CodeEventsContext())
             {
-                Eventos eventoExiste = ctx.Eventos.Find(evento.Id);
+                Eventos eventoExiste = ctx.Eventos.FirstOrDefault(x => x.Id == evento.Id);
 
                 if(eventoExiste != null)
                 {
-                    eventoExiste = evento;
+                    eventoExiste.Titulo = evento.Titulo;
+                    eventoExiste.Descricao = evento.Descricao;
+                    eventoExiste.DataEvento = evento.DataEvento;
+                    eventoExiste.Categorias = evento.Categorias;
+                    eventoExiste.Capacidade = evento.Capacidade;
+                    eventoExiste.Restricao = evento.Restricao;
+                    eventoExiste.Imagem = evento.Imagem;
+                    eventoExiste.Endereco = evento.Endereco;
+
                     ctx.Eventos.Update(eventoExiste);
                     ctx.SaveChanges();
                 }
@@ -39,11 +47,13 @@ namespace Senai_CodeEvent_WebApi.Repositorios
             }
         }
 
-        public List<Usuarios> Interessados(int id)
+        public List<UsuariosEventos> Interessados(int id)
         {
             using (CodeEventsContext ctx = new CodeEventsContext())
             {
-                return null;//UsuariosEventos evento = ctx.UsuariosEventos.Where(x => x.IdEvento == id).ToList();
+                UsuariosEventos evento = ctx.UsuariosEventos.Find(ctx.UsuariosEventos.Where(x => x.IdEvento == id).ToList());
+
+                return null; //evento;
             }
         }
     }

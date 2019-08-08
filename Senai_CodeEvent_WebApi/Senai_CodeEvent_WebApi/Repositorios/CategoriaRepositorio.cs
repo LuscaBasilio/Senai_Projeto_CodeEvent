@@ -7,7 +7,7 @@ namespace Senai_CodeEvent_WebApi.Repositorios
 {
     public class CategoriaRepositorio : ICategoriaRepositorio
     {
-        public void CadastrarCategoria(Categoria categoria)
+        public void CadastrarCategoria(Categorias categoria)
         {
             using (CodeEventsContext ctx = new CodeEventsContext())
             {
@@ -16,26 +16,26 @@ namespace Senai_CodeEvent_WebApi.Repositorios
             }
         }
 
-        public void EditarCategoria(Categoria categoria)
+        public void EditarCategoria(Categorias categoria)
         {
             using (CodeEventsContext ctx = new CodeEventsContext())
             {
-                Categoria categoriaExiste = ctx.Categoria.Find(categoria.Id);
+                Categorias categoriaExiste = ctx.Categorias.Find(categoria.Id);
 
                 if(categoriaExiste != null)
                 {
                     categoriaExiste.Nome = categoria.Nome;
-                    ctx.Categoria.Update(categoriaExiste);
+                    ctx.Categorias.Update(categoriaExiste);
                     ctx.SaveChanges();
                 }
             }
         }
 
-        public List<Categoria> ListarCategorias()
+        public List<Categorias> ListarCategorias()
         {
             using (CodeEventsContext ctx = new CodeEventsContext())
             {
-                return ctx.Categoria.ToList();
+                return ctx.Categorias.ToList();
             }
         }
     }

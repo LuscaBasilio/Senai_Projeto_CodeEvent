@@ -15,7 +15,7 @@ namespace Senai_CodeEvent_WebApi.Domains
         {
         }
 
-        public virtual DbSet<Categoria> Categoria { get; set; }
+        public virtual DbSet<Categorias> Categorias { get; set; }
         public virtual DbSet<Eventos> Eventos { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
         public virtual DbSet<UsuariosEventos> UsuariosEventos { get; set; }
@@ -25,15 +25,15 @@ namespace Senai_CodeEvent_WebApi.Domains
             if (!optionsBuilder.IsConfigured)
             {
                 //#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=47511187811; initial catalog = SENAI_CODEEVENTS;user id = sa; pwd = S#nai@132");
+                optionsBuilder.UseSqlServer("Data Source=xzzzzzzzzzzzzzz\\NOME; initial catalog = SENAI_CODEEVENTS; integrated security = true;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Categoria>(entity =>
+            modelBuilder.Entity<Categorias>(entity =>
             {
-                entity.ToTable("CATEGORIA");
+                entity.ToTable("CATEGORIAS");
 
                 entity.Property(e => e.Id).HasColumnName("ID");
 
@@ -52,7 +52,7 @@ namespace Senai_CodeEvent_WebApi.Domains
 
                 entity.Property(e => e.Capacidade).HasColumnName("CAPACIDADE");
 
-                entity.Property(e => e.Categoria).HasColumnName("CATEGORIA");
+                entity.Property(e => e.Categorias).HasColumnName("CATEGORIAS");
 
                 entity.Property(e => e.DataEvento)
                     .HasColumnName("DATA_EVENTO")
@@ -82,10 +82,10 @@ namespace Senai_CodeEvent_WebApi.Domains
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
-                entity.HasOne(d => d.CategoriaNavigation)
+                entity.HasOne(d => d.CategoriasNavigation)
                     .WithMany(p => p.Eventos)
-                    .HasForeignKey(d => d.Categoria)
-                    .HasConstraintName("FK__EVENTOS__CATEGOR__74AE54BC");
+                    .HasForeignKey(d => d.Categorias)
+                    .HasConstraintName("FK__EVENTOS__CATEGOR__571DF1D5");
             });
 
             modelBuilder.Entity<Usuarios>(entity =>
@@ -93,7 +93,7 @@ namespace Senai_CodeEvent_WebApi.Domains
                 entity.ToTable("USUARIOS");
 
                 entity.HasIndex(e => e.Email)
-                    .HasName("UQ__USUARIOS__161CF724F3BE0A82")
+                    .HasName("UQ__USUARIOS__161CF7240B5E94F3")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("ID");
@@ -104,7 +104,14 @@ namespace Senai_CodeEvent_WebApi.Domains
                     .HasMaxLength(100)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Nome)
+                    .IsRequired()
+                    .HasColumnName("NOME")
+                    .HasMaxLength(100)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.Senha)
+                    .IsRequired()
                     .HasColumnName("SENHA")
                     .HasMaxLength(100)
                     .IsUnicode(false);
@@ -123,12 +130,12 @@ namespace Senai_CodeEvent_WebApi.Domains
                 entity.HasOne(d => d.IdEventoNavigation)
                     .WithMany(p => p.UsuariosEventos)
                     .HasForeignKey(d => d.IdEvento)
-                    .HasConstraintName("FK__USUARIOS___ID_EV__787EE5A0");
+                    .HasConstraintName("FK__USUARIOS___ID_EV__5AEE82B9");
 
                 entity.HasOne(d => d.IdUserNavigation)
                     .WithMany(p => p.UsuariosEventos)
                     .HasForeignKey(d => d.IdUser)
-                    .HasConstraintName("FK__USUARIOS___ID_US__778AC167");
+                    .HasConstraintName("FK__USUARIOS___ID_US__59FA5E80");
             });
         }
     }

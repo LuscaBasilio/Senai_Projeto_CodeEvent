@@ -63,7 +63,7 @@ namespace Senai_CodeEvent_WebApi.Controllers
         //{
         //    try
         //    {
-
+        //        return Ok(eventoRepositorio.Interessados());
         //    }
         //    catch (Exception ex)
         //    {

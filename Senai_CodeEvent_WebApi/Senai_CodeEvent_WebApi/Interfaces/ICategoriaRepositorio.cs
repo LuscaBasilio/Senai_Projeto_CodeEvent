@@ -5,10 +5,10 @@ namespace Senai_CodeEvent_WebApi.Interfaces
 {
     public interface ICategoriaRepositorio
     {
-        void CadastrarCategoria(Categoria categoria);
+        void CadastrarCategoria(Categorias categoria);
 
-        List<Categoria> ListarCategorias();
+        List<Categorias> ListarCategorias();
 
-        void EditarCategoria(Categoria categoria);
+        void EditarCategoria(Categorias categoria);
     }
 }

@@ -11,6 +11,6 @@ namespace Senai_CodeEvent_WebApi.Interfaces
 
         void EditarEvento(Eventos evento);
 
-        List<Usuarios> Interessados(int id);
+        List<UsuariosEventos> Interessados(int id);
     }
 }

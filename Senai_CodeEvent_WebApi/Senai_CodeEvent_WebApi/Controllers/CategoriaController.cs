@@ -19,7 +19,7 @@ namespace Senai_CodeEvent_WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult CadastrarCategoria(Categoria categoria)
+        public IActionResult CadastrarCategoria(Categorias categoria)
         {
             try
             {
@@ -33,7 +33,7 @@ namespace Senai_CodeEvent_WebApi.Controllers
         }
 
         [HttpPut]
-        public IActionResult EditarCategoria(Categoria categoria)
+        public IActionResult EditarCategoria(Categorias categoria)
         {
             try
             {
