@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using Swashbuckle.AspNetCore.Swagger;
 
 namespace Senai_CodeEvent_WebApi
@@ -47,6 +48,21 @@ namespace Senai_CodeEvent_WebApi
                     Title = "CodeEvents",
                     Version = "v1"
                 });
+            });
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = "JwtBearer";
+                options.DefaultChallengeScheme = "JwtBearer";
+            }).AddJwtBearer("JwtBearer", options => options.TokenValidationParameters = new TokenValidationParameters
+            {
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = false,
+                IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("CodeEventsSecurityKey")),
+                ClockSkew = TimeSpan.FromMinutes(30),
+                ValidIssuer = "CodeEvents",
+                ValidAudience = "CodeEvents"
             });
         }
 
