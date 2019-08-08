@@ -13,5 +13,14 @@ namespace Senai_CodeEvent_WebApi.Repositorios
                 return ctx.Usuarios.FirstOrDefault(x => x.Email == email && x.Senha == senha);
             }
         }
+
+        public void MarcarPresenca(UsuariosEventos UsuarioEvento)
+        {
+            using (CodeEventsContext ctx = new CodeEventsContext())
+            {
+                ctx.Add(UsuarioEvento);
+                ctx.SaveChanges();
+            }
+        }
     }
 }

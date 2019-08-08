@@ -1,4 +1,5 @@
-﻿using Senai_CodeEvent_WebApi.Domains;
+﻿using Microsoft.EntityFrameworkCore;
+using Senai_CodeEvent_WebApi.Domains;
 using Senai_CodeEvent_WebApi.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,9 +52,7 @@ namespace Senai_CodeEvent_WebApi.Repositorios
         {
             using (CodeEventsContext ctx = new CodeEventsContext())
             {
-                UsuariosEventos evento = ctx.UsuariosEventos.Find(ctx.UsuariosEventos.Where(x => x.IdEvento == id).ToList());
-
-                return null; //evento;
+                return ctx.UsuariosEventos.Where(x => x.Id == id).ToList();
             }
         }
     }

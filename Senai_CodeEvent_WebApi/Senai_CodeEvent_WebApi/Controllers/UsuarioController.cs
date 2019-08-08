@@ -19,7 +19,7 @@ namespace Senai_CodeEvent_WebApi.Controllers
         public UsuarioController()
         {
             usuarioRepositorio = new UsuarioRepositorio();
-        } 
+        }
 
         [HttpPost]
         public IActionResult Login(LoginViewModel login)
@@ -27,7 +27,7 @@ namespace Senai_CodeEvent_WebApi.Controllers
             try
             {
                 Usuarios usuario = usuarioRepositorio.Login(login.Email, login.Senha);
-                if(usuario == null)
+                if (usuario == null)
                 {
                     return NotFound(new
                     {
@@ -52,9 +52,24 @@ namespace Senai_CodeEvent_WebApi.Controllers
                     expires: null,
                     signingCredentials: credential
                     );
-                return Ok(new { Mensagem = "Ta na mão", Token = new JwtSecurityTokenHandler().WriteToken(token)});
+                return Ok(new { Mensagem = "Ta na mão", Token = new JwtSecurityTokenHandler().WriteToken(token) });
             }
-            catch(Exception ex)
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
+
+        
+        [HttpPost("Presenca")]
+        public IActionResult MarcarPresenca(UsuariosEventos UsuarioEvento)
+        {
+            try
+            {
+                usuarioRepositorio.MarcarPresenca(UsuarioEvento);
+                return Ok();
+            }
+            catch (Exception ex)
             {
                 return BadRequest(ex);
             }

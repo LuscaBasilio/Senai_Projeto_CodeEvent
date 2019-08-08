@@ -58,17 +58,17 @@ namespace Senai_CodeEvent_WebApi.Controllers
             }
         }
 
-        //[HttpGet]
-        //public IActionResult Interessados()
-        //{
-        //    try
-        //    {
-        //        return Ok(eventoRepositorio.Interessados());
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex);
-        //    }
-        //}
+        [HttpGet("{id}")]
+        public IActionResult Interessados(int id)
+        {
+            try
+            {
+                return Ok(eventoRepositorio.Interessados(id));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex);
+            }
+        }
     }
 }

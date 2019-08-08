@@ -20,7 +20,7 @@ namespace Senai_CodeEvent_WebApi.Repositorios
         {
             using (CodeEventsContext ctx = new CodeEventsContext())
             {
-                Categorias categoriaExiste = ctx.Categorias.Find(categoria.Id);
+                Categorias categoriaExiste = ctx.Categorias.FirstOrDefault(x => x.Id == categoria.Id);
 
                 if(categoriaExiste != null)
                 {

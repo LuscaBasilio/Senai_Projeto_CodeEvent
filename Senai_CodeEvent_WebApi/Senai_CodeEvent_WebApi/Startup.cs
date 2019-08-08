@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -31,6 +33,13 @@ namespace Senai_CodeEvent_WebApi
                 options.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
                 options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            
+            //Compressão por Middleware
+            services.Configure<GzipCompressionProviderOptions>(options => options.Level = CompressionLevel.Optimal);
+
+            services.AddResponseCompression(options => {
+                options.Providers.Add<GzipCompressionProvider>();
+            }); 
 
             services.AddCors(options =>
             {
@@ -76,6 +85,8 @@ namespace Senai_CodeEvent_WebApi
                 app.UseSwagger();
 
                 app.UseDeveloperExceptionPage();
+
+                app.UseResponseCompression();
             }
 
             app.UseMvc();
